@@ -1,0 +1,11 @@
+select TPNdata.hn , TPNdata.DID, TPNdatadg.* from TPNdatadg
+LEFT OUTER JOIN TPNdata on TPNdata.DID =  TPNdatadg.DDGID
+WHERE DID in (SELECT DISTINCT TOP 5 DID from TPNdata ORDER BY DID DESC)
+
+
+
+select * from TPNdata where hn in (1)
+
+SELECT DISTINCT TOP 5 DID from TPNdata ORDER BY DID
+
+SELECT * from TPNdatadg
